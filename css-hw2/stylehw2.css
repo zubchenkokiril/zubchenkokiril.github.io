@@ -29,6 +29,7 @@ body {
 	width: 200px;
 	height: 100vh;
 
+
 	background: #222;
 }
 
@@ -60,7 +61,7 @@ main {
 	max-width: 900px;
 	line-height: 1.6;
 }
+
 footer{
-	width: 100px;
-	position: fixed;
+    margin-left: 240px;
 }
