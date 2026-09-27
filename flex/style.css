@@ -104,13 +104,15 @@ body {
 main {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     padding-inline: 50px;
     gap: 30px;
 }
 
 main section {
-    max-width: 300px;
+    flex: 1 1 280px;
+    max-width: 350px;
     display: flex;
     flex-direction: column;
     margin: 40px 0;
@@ -126,11 +128,18 @@ main section h3 {
 
 main section p {
     margin-bottom: 10px;
+    color: #64748b;
 }
 
 main section a {
     color: #3c84f8;
     font-weight: 600;
+}
+
+main section img {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 20px;
 }
 
 a {
@@ -165,10 +174,94 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 30px 40px;
     border-top: 1px solid #e9ecef;
 }
 
 footer p {
     color: #6c757db7;
+}
+
+.social a {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+@media (max-width: 700px) {
+    header {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .nav {
+        order: 3;
+        display: flex;
+        flex: 1 0 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav a {
+        padding: 8px;
+    }
+
+    .hero {
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    main {
+        padding-inline: 20px;
+        gap: 16px;
+    }
+
+    main section {
+        flex-basis: 260px;
+        margin: 10px 0;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 12px;
+        padding: 24px 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 25px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .header {
+        margin: 40px 20px 0;
+        text-align: center;
+    }
+
+    .header h2 {
+        font-size: 22px;
+    }
+
+    main {
+        padding-inline: 16px;
+    }
+
+    main section {
+        flex-basis: 100%;
+        padding: 24px;
+    }
 }
